@@ -16,6 +16,35 @@
   }
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+/* globals.css */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
